@@ -24,6 +24,21 @@ class PartyCell: UITableViewCell {
         
         //TODO: set image from URL
         
+        let imageUrl = URL(string: partyRock.imageURL)
+        
+        DispatchQueue.global().async {
+            
+            do {
+                let data = try Data(contentsOf: imageUrl!)
+                
+                DispatchQueue.global().sync {
+                  self.videoPriviewImage.image = UIImage(data: data)
+                }
+                
+            } catch {
+                // handle error
+            }
+        }
     }
 
 }
