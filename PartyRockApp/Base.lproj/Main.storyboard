@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="228" width="375" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="pxY-oF-M5H">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="73" id="pxY-oF-M5H" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxY-oF-M5H" id="DGw-8q-CWP">
@@ -105,6 +105,10 @@
                                                 <constraint firstItem="C9c-wl-nES" firstAttribute="trailing" secondItem="DGw-8q-CWP" secondAttribute="trailingMargin" constant="8" id="sXp-uh-iW0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPriviewImage" destination="sVy-LX-bsd" id="C5e-Cc-fiI"/>
+                                            <outlet property="videoTitle" destination="C9c-wl-nES" id="PP7-d5-Gra"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -123,10 +127,46 @@
                             <constraint firstItem="PGo-IK-cAL" firstAttribute="top" secondItem="Ys8-0Z-A7b" secondAttribute="bottom" id="sds-cT-SpE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nrl-ef-1fw" id="Fox-QJ-WiE"/>
+                        <segue destination="kpI-8i-35H" kind="showDetail" id="nNc-Wu-rzd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="AHE-ae-nkP">
+            <objects>
+                <viewController id="kpI-8i-35H" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TA9-Rt-lgy"/>
+                        <viewControllerLayoutGuide type="bottom" id="HY5-uM-vZ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5P-Ho-whH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-Ns-OGi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3qT-6C-Pab"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vHx-Ns-OGi" firstAttribute="top" secondItem="c5P-Ho-whH" secondAttribute="top" id="H8Y-O3-yeC"/>
+                            <constraint firstItem="vHx-Ns-OGi" firstAttribute="leading" secondItem="c5P-Ho-whH" secondAttribute="leading" id="USD-rc-Kzv"/>
+                            <constraint firstAttribute="trailing" secondItem="vHx-Ns-OGi" secondAttribute="trailing" id="k39-Wb-MCa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E48-1g-ent" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
