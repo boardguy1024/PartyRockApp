@@ -14,6 +14,7 @@
 		A283C9181EB878DA0083F103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A283C9161EB878DA0083F103 /* LaunchScreen.storyboard */; };
 		A283C9231EB878DA0083F103 /* PartyRockAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A283C9221EB878DA0083F103 /* PartyRockAppTests.swift */; };
 		A283C92E1EB878DA0083F103 /* PartyRockAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A283C92D1EB878DA0083F103 /* PartyRockAppUITests.swift */; };
+		A283C9401EBC1C720083F103 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A283C93F1EBC1C720083F103 /* still time.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A283C9291EB878DA0083F103 /* PartyRockAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyRockAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A283C92D1EB878DA0083F103 /* PartyRockAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRockAppUITests.swift; sourceTree = "<group>"; };
 		A283C92F1EB878DA0083F103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A283C93F1EBC1C720083F103 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		A283C90C1EB878DA0083F103 /* PartyRockApp */ = {
 			isa = PBXGroup;
 			children = (
+				A283C93E1EBC1C5E0083F103 /* Files */,
 				A283C93D1EB87B0C0083F103 /* Model */,
 				A283C93C1EB87B010083F103 /* View */,
 				A283C93B1EB87A5F0083F103 /* Controller */,
@@ -147,6 +150,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A283C93E1EBC1C5E0083F103 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				A283C93F1EBC1C720083F103 /* still time.ttf */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A283C9181EB878DA0083F103 /* LaunchScreen.storyboard in Resources */,
+				A283C9401EBC1C720083F103 /* still time.ttf in Resources */,
 				A283C9151EB878DA0083F103 /* Assets.xcassets in Resources */,
 				A283C9131EB878DA0083F103 /* Main.storyboard in Resources */,
 			);
@@ -538,6 +550,7 @@
 				A283C9341EB878DA0083F103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A283C9351EB878DA0083F103 /* Build configuration list for PBXNativeTarget "PartyRockAppTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +559,7 @@
 				A283C9371EB878DA0083F103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A283C9381EB878DA0083F103 /* Build configuration list for PBXNativeTarget "PartyRockAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +568,7 @@
 				A283C93A1EB878DA0083F103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
