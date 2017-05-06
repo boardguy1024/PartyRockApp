@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,7 +129,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Nrl-ef-1fw" id="Fox-QJ-WiE"/>
-                        <segue destination="kpI-8i-35H" kind="showDetail" id="nNc-Wu-rzd"/>
+                        <segue destination="kpI-8i-35H" kind="showDetail" identifier="VideoVC" id="nNc-Wu-rzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,20 +149,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-Ns-OGi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="3qT-6C-Pab"/>
+                                    <constraint firstAttribute="height" constant="250" id="3qT-6C-Pab"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-mc-cKA">
+                                <rect key="frame" x="5" y="280" width="365" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lRJ-kt-Y4Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QbM-mc-cKA" secondAttribute="trailing" constant="5" id="BAb-C2-737"/>
                             <constraint firstItem="vHx-Ns-OGi" firstAttribute="top" secondItem="c5P-Ho-whH" secondAttribute="top" id="H8Y-O3-yeC"/>
                             <constraint firstItem="vHx-Ns-OGi" firstAttribute="leading" secondItem="c5P-Ho-whH" secondAttribute="leading" id="USD-rc-Kzv"/>
+                            <constraint firstItem="QbM-mc-cKA" firstAttribute="leading" secondItem="c5P-Ho-whH" secondAttribute="leading" constant="5" id="eFs-1f-SGZ"/>
+                            <constraint firstItem="QbM-mc-cKA" firstAttribute="top" secondItem="vHx-Ns-OGi" secondAttribute="bottom" constant="30" id="g14-5y-qEA"/>
                             <constraint firstAttribute="trailing" secondItem="vHx-Ns-OGi" secondAttribute="trailing" id="k39-Wb-MCa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="QbM-mc-cKA" id="Aci-Co-6zg"/>
+                        <outlet property="webView" destination="vHx-Ns-OGi" id="S4f-1K-XJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E48-1g-ent" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2143C4B1EBD69D700336F8F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2143C4A1EBD69D700336F8F /* MediaPlayer.framework */; };
 		A283C90E1EB878DA0083F103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A283C90D1EB878DA0083F103 /* AppDelegate.swift */; };
 		A283C9101EB878DA0083F103 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A283C90F1EB878DA0083F103 /* MainVC.swift */; };
 		A283C9131EB878DA0083F103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A283C9111EB878DA0083F103 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2143C4A1EBD69D700336F8F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A283C90A1EB878DA0083F103 /* PartyRockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyRockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A283C90D1EB878DA0083F103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A283C90F1EB878DA0083F103 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2143C4B1EBD69D700336F8F /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2143C491EBD69D700336F8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2143C4A1EBD69D700336F8F /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A283C9011EB878D90083F103 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				A283C9211EB878DA0083F103 /* PartyRockAppTests */,
 				A283C92C1EB878DA0083F103 /* PartyRockAppUITests */,
 				A283C90B1EB878DA0083F103 /* Products */,
+				A2143C491EBD69D700336F8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
